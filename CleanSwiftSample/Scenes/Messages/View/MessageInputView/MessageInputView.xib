@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.59999999999999998" contentMode="scaleToFill" id="6bs-hz-Aew" customClass="MessageInputView" customModule="CleanSwiftSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hV6-KJ-1lJ">
+                    <rect key="frame" x="504" y="8" width="36" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="46J-DU-tMN"/>
+                        <constraint firstAttribute="width" constant="36" id="gJF-n0-aTG"/>
+                    </constraints>
+                    <state key="normal" title="Send"/>
+                    <connections>
+                        <action selector="buttonSendTapped:" destination="6bs-hz-Aew" eventType="touchUpInside" id="KtR-uM-Kog"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Maz-Eg-104">
+                    <rect key="frame" x="20" y="8" width="472" height="34"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="bsg-Sh-G0K"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="35z-te-qeA"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="35z-te-qeA" firstAttribute="trailing" secondItem="hV6-KJ-1lJ" secondAttribute="trailing" constant="20" id="7m5-oj-jbj"/>
+                <constraint firstItem="Maz-Eg-104" firstAttribute="centerY" secondItem="6bs-hz-Aew" secondAttribute="centerY" id="S9t-4F-Uib"/>
+                <constraint firstItem="hV6-KJ-1lJ" firstAttribute="centerY" secondItem="6bs-hz-Aew" secondAttribute="centerY" id="cNd-0F-6nN"/>
+                <constraint firstItem="Maz-Eg-104" firstAttribute="leading" secondItem="35z-te-qeA" secondAttribute="leading" constant="20" id="r61-LW-7Vb"/>
+                <constraint firstItem="hV6-KJ-1lJ" firstAttribute="leading" secondItem="Maz-Eg-104" secondAttribute="trailing" constant="12" id="ybQ-Bj-Lce"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonSend" destination="hV6-KJ-1lJ" id="PC6-Rf-Hin"/>
+                <outlet property="textField" destination="Maz-Eg-104" id="E54-Zn-KBz"/>
+            </connections>
+            <point key="canvasLocation" x="86.956521739130437" y="-123.91304347826087"/>
+        </view>
+    </objects>
+</document>
