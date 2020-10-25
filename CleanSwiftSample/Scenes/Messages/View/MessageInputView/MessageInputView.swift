@@ -8,8 +8,8 @@
 import UIKit
 
 final class MessageInputView: UIView {
-  @IBOutlet weak var textField: UITextField!
-  @IBOutlet weak var buttonSend: UIButton!
+  @IBOutlet private weak var textField: UITextField!
+  @IBOutlet private weak var buttonSend: UIButton!
   
   var buttonSendTapped: ((_ text: String?) -> Void)?
   

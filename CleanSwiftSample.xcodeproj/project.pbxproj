@@ -13,7 +13,6 @@
 		16732B222544BF2B00894C19 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16732B212544BF2B00894C19 /* MessageTableViewCell.xib */; };
 		16732B282544C34400894C19 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 16732B272544C34400894C19 /* Kingfisher */; };
 		16732B2D2544C47A00894C19 /* MessagesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B2C2544C47A00894C19 /* MessagesTableViewDataSource.swift */; };
-		16732B312544C74000894C19 /* MessagesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B2C2544C47A00894C19 /* MessagesTableViewDataSource.swift */; };
 		16732B3D2544D26400894C19 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B3C2544D26400894C19 /* MessageInputView.swift */; };
 		16732B422544D28500894C19 /* MessageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16732B412544D28500894C19 /* MessageInputView.xib */; };
 		16732B472544D99300894C19 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B462544D99300894C19 /* UIView+Extensions.swift */; };
@@ -24,53 +23,66 @@
 		1697354C25450628001EFBD1 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697354B25450628001EFBD1 /* Mocks.swift */; };
 		169735512545066B001EFBD1 /* MessagesStubResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 169735502545066B001EFBD1 /* MessagesStubResponse.json */; };
 		1697355E2545AA2E001EFBD1 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697355D2545AA2E001EFBD1 /* EdgeInsetLabel.swift */; };
+		169735D42545CC1F001EFBD1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13322544890C006F32F0 /* Strings.swift */; };
+		169735D82545CC21001EFBD1 /* ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF133825448B20006F32F0 /* ValidationRules.swift */; };
+		169735DC2545CC22001EFBD1 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B0B2544B92000894C19 /* ViewModels.swift */; };
+		169735E02545CC24001EFBD1 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B102544BC0900894C19 /* AlertFactory.swift */; };
+		169735E42545CC26001EFBD1 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */; };
+		169735E82545CC28001EFBD1 /* LocalProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735362544FE64001EFBD1 /* LocalProperties.swift */; };
+		169735EC2545CC29001EFBD1 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697355D2545AA2E001EFBD1 /* EdgeInsetLabel.swift */; };
+		169735F02545CC2B001EFBD1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF134825448F7F006F32F0 /* UIViewController+Extensions.swift */; };
+		169735F42545CC2D001EFBD1 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B462544D99300894C19 /* UIView+Extensions.swift */; };
+		169735F82545CC2E001EFBD1 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735042544ED9E001EFBD1 /* TimeInterval+Extensions.swift */; };
+		169735FC2545CC30001EFBD1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E82544754D006F32F0 /* LoginViewController.swift */; };
+		169736002545CC33001EFBD1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AF131D25447CAC006F32F0 /* LoginViewController.xib */; };
+		169736042545CC35001EFBD1 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E72544754D006F32F0 /* LoginModels.swift */; };
+		169736082545CC37001EFBD1 /* LoginDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1329254486B2006F32F0 /* LoginDataStore.swift */; };
+		1697360C2545CC39001EFBD1 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E92544754D006F32F0 /* LoginInteractor.swift */; };
+		169736102545CC3A001EFBD1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E42544754D006F32F0 /* LoginPresenter.swift */; };
+		169736142545CC3C001EFBD1 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E62544754D006F32F0 /* LoginRouter.swift */; };
+		169736182545CC3F001EFBD1 /* MessagesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13822544B451006F32F0 /* MessagesAPIResponse.swift */; };
+		1697361C2545CC41001EFBD1 /* MessagesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13812544B451006F32F0 /* MessagesEndpoint.swift */; };
+		169736202545CC43001EFBD1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1300254475C8006F32F0 /* MessagesViewController.swift */; };
+		169736242545CC45001EFBD1 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AF133E25448E64006F32F0 /* MessagesViewController.xib */; };
+		169736282545CC47001EFBD1 /* MessagesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B2C2544C47A00894C19 /* MessagesTableViewDataSource.swift */; };
+		1697362C2545CC49001EFBD1 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B3C2544D26400894C19 /* MessageInputView.swift */; };
+		169736302545CC4C001EFBD1 /* MessageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16732B412544D28500894C19 /* MessageInputView.xib */; };
+		169736342545CC4E001EFBD1 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B192544BF1100894C19 /* MessageTableViewCell.swift */; };
+		169736382545CC50001EFBD1 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16732B212544BF2B00894C19 /* MessageTableViewCell.xib */; };
+		1697363C2545CC52001EFBD1 /* MessagesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FF254475C8006F32F0 /* MessagesModels.swift */; };
+		169736402545CC54001EFBD1 /* MessagesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13512544915E006F32F0 /* MessagesDataStore.swift */; };
+		169736442545CC56001EFBD1 /* MessagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1301254475C8006F32F0 /* MessagesInteractor.swift */; };
+		169736482545CC58001EFBD1 /* MessagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FC254475C8006F32F0 /* MessagesPresenter.swift */; };
+		1697364C2545CC5A001EFBD1 /* MessagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FD254475C8006F32F0 /* MessagesWorker.swift */; };
+		169736502545CC5B001EFBD1 /* MessagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FE254475C8006F32F0 /* MessagesRouter.swift */; };
+		169736562545CCA9001EFBD1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 169736552545CCA9001EFBD1 /* Moya */; };
+		169736582545CCA9001EFBD1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 169736572545CCA9001EFBD1 /* Kingfisher */; };
 		16AF127E25445757006F32F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127D25445757006F32F0 /* AppDelegate.swift */; };
 		16AF128025445757006F32F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127F25445757006F32F0 /* SceneDelegate.swift */; };
 		16AF128725445759006F32F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AF128625445759006F32F0 /* Assets.xcassets */; };
 		16AF128A25445759006F32F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AF128825445759006F32F0 /* LaunchScreen.storyboard */; };
-		16AF129525445759006F32F0 /* CleanSwiftSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF129425445759006F32F0 /* CleanSwiftSampleTests.swift */; };
 		16AF12A025445759006F32F0 /* CleanSwiftSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF129F25445759006F32F0 /* CleanSwiftSampleUITests.swift */; };
 		16AF12D225447244006F32F0 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 16AF12D125447244006F32F0 /* Moya */; };
 		16AF12EA2544754D006F32F0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E42544754D006F32F0 /* LoginPresenter.swift */; };
-		16AF12EB2544754D006F32F0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E42544754D006F32F0 /* LoginPresenter.swift */; };
 		16AF12EE2544754D006F32F0 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E62544754D006F32F0 /* LoginRouter.swift */; };
-		16AF12EF2544754D006F32F0 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E62544754D006F32F0 /* LoginRouter.swift */; };
 		16AF12F02544754D006F32F0 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E72544754D006F32F0 /* LoginModels.swift */; };
-		16AF12F12544754E006F32F0 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E72544754D006F32F0 /* LoginModels.swift */; };
 		16AF12F22544754E006F32F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E82544754D006F32F0 /* LoginViewController.swift */; };
-		16AF12F32544754E006F32F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E82544754D006F32F0 /* LoginViewController.swift */; };
 		16AF12F42544754E006F32F0 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E92544754D006F32F0 /* LoginInteractor.swift */; };
-		16AF12F52544754E006F32F0 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12E92544754D006F32F0 /* LoginInteractor.swift */; };
 		16AF1302254475C8006F32F0 /* MessagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FC254475C8006F32F0 /* MessagesPresenter.swift */; };
-		16AF1303254475C8006F32F0 /* MessagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FC254475C8006F32F0 /* MessagesPresenter.swift */; };
 		16AF1304254475C8006F32F0 /* MessagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FD254475C8006F32F0 /* MessagesWorker.swift */; };
-		16AF1305254475C8006F32F0 /* MessagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FD254475C8006F32F0 /* MessagesWorker.swift */; };
 		16AF1306254475C8006F32F0 /* MessagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FE254475C8006F32F0 /* MessagesRouter.swift */; };
-		16AF1307254475C8006F32F0 /* MessagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FE254475C8006F32F0 /* MessagesRouter.swift */; };
 		16AF1308254475C8006F32F0 /* MessagesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FF254475C8006F32F0 /* MessagesModels.swift */; };
-		16AF1309254475C8006F32F0 /* MessagesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FF254475C8006F32F0 /* MessagesModels.swift */; };
 		16AF130A254475C8006F32F0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1300254475C8006F32F0 /* MessagesViewController.swift */; };
-		16AF130B254475C8006F32F0 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1300254475C8006F32F0 /* MessagesViewController.swift */; };
 		16AF130C254475C8006F32F0 /* MessagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1301254475C8006F32F0 /* MessagesInteractor.swift */; };
-		16AF130D254475C8006F32F0 /* MessagesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1301254475C8006F32F0 /* MessagesInteractor.swift */; };
 		16AF131E25447CAC006F32F0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AF131D25447CAC006F32F0 /* LoginViewController.xib */; };
-		16AF131F25447CAC006F32F0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AF131D25447CAC006F32F0 /* LoginViewController.xib */; };
 		16AF132A254486B2006F32F0 /* LoginDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1329254486B2006F32F0 /* LoginDataStore.swift */; };
-		16AF132B254486B2006F32F0 /* LoginDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF1329254486B2006F32F0 /* LoginDataStore.swift */; };
 		16AF13332544890C006F32F0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13322544890C006F32F0 /* Strings.swift */; };
-		16AF13342544890C006F32F0 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13322544890C006F32F0 /* Strings.swift */; };
 		16AF133925448B20006F32F0 /* ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF133825448B20006F32F0 /* ValidationRules.swift */; };
-		16AF133A25448B20006F32F0 /* ValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF133825448B20006F32F0 /* ValidationRules.swift */; };
 		16AF133F25448E64006F32F0 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AF133E25448E64006F32F0 /* MessagesViewController.xib */; };
-		16AF134025448E64006F32F0 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AF133E25448E64006F32F0 /* MessagesViewController.xib */; };
 		16AF134925448F7F006F32F0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF134825448F7F006F32F0 /* UIViewController+Extensions.swift */; };
-		16AF134A25448F7F006F32F0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF134825448F7F006F32F0 /* UIViewController+Extensions.swift */; };
 		16AF13522544915E006F32F0 /* MessagesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13512544915E006F32F0 /* MessagesDataStore.swift */; };
-		16AF13532544915E006F32F0 /* MessagesDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13512544915E006F32F0 /* MessagesDataStore.swift */; };
 		16AF13832544B451006F32F0 /* MessagesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13812544B451006F32F0 /* MessagesEndpoint.swift */; };
-		16AF13842544B451006F32F0 /* MessagesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13812544B451006F32F0 /* MessagesEndpoint.swift */; };
 		16AF13852544B451006F32F0 /* MessagesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13822544B451006F32F0 /* MessagesAPIResponse.swift */; };
-		16AF13862544B451006F32F0 /* MessagesAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF13822544B451006F32F0 /* MessagesAPIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,7 +125,6 @@
 		16AF128925445759006F32F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16AF128B25445759006F32F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16AF129025445759006F32F0 /* CleanSwiftSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16AF129425445759006F32F0 /* CleanSwiftSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftSampleTests.swift; sourceTree = "<group>"; };
 		16AF129625445759006F32F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16AF129B25445759006F32F0 /* CleanSwiftSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AF129F25445759006F32F0 /* CleanSwiftSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftSampleUITests.swift; sourceTree = "<group>"; };
@@ -154,6 +165,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169736582545CCA9001EFBD1 /* Kingfisher in Frameworks */,
+				169736562545CCA9001EFBD1 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +218,13 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		169736542545CCA9001EFBD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		16AF127125445757006F32F0 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +232,7 @@
 				16AF129325445759006F32F0 /* CleanSwiftSampleTests */,
 				16AF129E25445759006F32F0 /* CleanSwiftSampleUITests */,
 				16AF127B25445757006F32F0 /* Products */,
+				169736542545CCA9001EFBD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				1697354225450561001EFBD1 /* Messages */,
-				16AF129425445759006F32F0 /* CleanSwiftSampleTests.swift */,
 				16AF129625445759006F32F0 /* Info.plist */,
 			);
 			path = CleanSwiftSampleTests;
@@ -402,6 +422,10 @@
 				16AF129225445759006F32F0 /* PBXTargetDependency */,
 			);
 			name = CleanSwiftSampleTests;
+			packageProductDependencies = (
+				169736552545CCA9001EFBD1 /* Moya */,
+				169736572545CCA9001EFBD1 /* Kingfisher */,
+			);
 			productName = CleanSwiftSampleTests;
 			productReference = 16AF129025445759006F32F0 /* CleanSwiftSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -438,7 +462,6 @@
 					};
 					16AF128F25445759006F32F0 = {
 						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 16AF127925445757006F32F0;
 					};
 					16AF129A25445759006F32F0 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -488,8 +511,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16AF134025448E64006F32F0 /* MessagesViewController.xib in Resources */,
-				16AF131F25447CAC006F32F0 /* LoginViewController.xib in Resources */,
+				169736242545CC45001EFBD1 /* MessagesViewController.xib in Resources */,
+				169736302545CC4C001EFBD1 /* MessageInputView.xib in Resources */,
+				169736382545CC50001EFBD1 /* MessageTableViewCell.xib in Resources */,
+				169736002545CC33001EFBD1 /* LoginViewController.xib in Resources */,
 				169735512545066B001EFBD1 /* MessagesStubResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,28 +570,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16AF12F32544754E006F32F0 /* LoginViewController.swift in Sources */,
-				16AF12EB2544754D006F32F0 /* LoginPresenter.swift in Sources */,
-				16AF1303254475C8006F32F0 /* MessagesPresenter.swift in Sources */,
-				16AF12F52544754E006F32F0 /* LoginInteractor.swift in Sources */,
-				16AF12F12544754E006F32F0 /* LoginModels.swift in Sources */,
-				16AF129525445759006F32F0 /* CleanSwiftSampleTests.swift in Sources */,
-				16AF133A25448B20006F32F0 /* ValidationRules.swift in Sources */,
-				16AF13342544890C006F32F0 /* Strings.swift in Sources */,
-				16AF130B254475C8006F32F0 /* MessagesViewController.swift in Sources */,
-				16AF1307254475C8006F32F0 /* MessagesRouter.swift in Sources */,
-				16732B312544C74000894C19 /* MessagesTableViewDataSource.swift in Sources */,
+				169735EC2545CC29001EFBD1 /* EdgeInsetLabel.swift in Sources */,
+				169735E82545CC28001EFBD1 /* LocalProperties.swift in Sources */,
+				169735F02545CC2B001EFBD1 /* UIViewController+Extensions.swift in Sources */,
 				1697354C25450628001EFBD1 /* Mocks.swift in Sources */,
-				16AF13862544B451006F32F0 /* MessagesAPIResponse.swift in Sources */,
-				16AF12EF2544754D006F32F0 /* LoginRouter.swift in Sources */,
-				16AF1309254475C8006F32F0 /* MessagesModels.swift in Sources */,
-				16AF134A25448F7F006F32F0 /* UIViewController+Extensions.swift in Sources */,
-				16AF132B254486B2006F32F0 /* LoginDataStore.swift in Sources */,
-				16AF13532544915E006F32F0 /* MessagesDataStore.swift in Sources */,
+				1697360C2545CC39001EFBD1 /* LoginInteractor.swift in Sources */,
+				169736342545CC4E001EFBD1 /* MessageTableViewCell.swift in Sources */,
+				169735D42545CC1F001EFBD1 /* Strings.swift in Sources */,
+				169735E42545CC26001EFBD1 /* UserDefaultsBacked.swift in Sources */,
+				169735DC2545CC22001EFBD1 /* ViewModels.swift in Sources */,
+				169735F82545CC2E001EFBD1 /* TimeInterval+Extensions.swift in Sources */,
+				169736102545CC3A001EFBD1 /* LoginPresenter.swift in Sources */,
+				1697361C2545CC41001EFBD1 /* MessagesEndpoint.swift in Sources */,
+				169736182545CC3F001EFBD1 /* MessagesAPIResponse.swift in Sources */,
+				169735D82545CC21001EFBD1 /* ValidationRules.swift in Sources */,
+				169736482545CC58001EFBD1 /* MessagesPresenter.swift in Sources */,
+				169736042545CC35001EFBD1 /* LoginModels.swift in Sources */,
+				169736502545CC5B001EFBD1 /* MessagesRouter.swift in Sources */,
 				16973544254505AC001EFBD1 /* MessagesInteractorTests.swift in Sources */,
-				16AF1305254475C8006F32F0 /* MessagesWorker.swift in Sources */,
-				16AF13842544B451006F32F0 /* MessagesEndpoint.swift in Sources */,
-				16AF130D254475C8006F32F0 /* MessagesInteractor.swift in Sources */,
+				169736202545CC43001EFBD1 /* MessagesViewController.swift in Sources */,
+				169736282545CC47001EFBD1 /* MessagesTableViewDataSource.swift in Sources */,
+				169736442545CC56001EFBD1 /* MessagesInteractor.swift in Sources */,
+				169735E02545CC24001EFBD1 /* AlertFactory.swift in Sources */,
+				169736402545CC54001EFBD1 /* MessagesDataStore.swift in Sources */,
+				1697362C2545CC49001EFBD1 /* MessageInputView.swift in Sources */,
+				1697364C2545CC5A001EFBD1 /* MessagesWorker.swift in Sources */,
+				169736142545CC3C001EFBD1 /* LoginRouter.swift in Sources */,
+				1697363C2545CC52001EFBD1 /* MessagesModels.swift in Sources */,
+				169735FC2545CC30001EFBD1 /* LoginViewController.swift in Sources */,
+				169735F42545CC2D001EFBD1 /* UIView+Extensions.swift in Sources */,
+				169736082545CC37001EFBD1 /* LoginDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,7 +796,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SC4WC3C495;
 				INFOPLIST_FILE = CleanSwiftSampleTests/Info.plist;
@@ -777,7 +809,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanSwiftSample.app/CleanSwiftSample";
 			};
 			name = Debug;
 		};
@@ -785,7 +816,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SC4WC3C495;
 				INFOPLIST_FILE = CleanSwiftSampleTests/Info.plist;
@@ -799,7 +829,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanSwiftSample.app/CleanSwiftSample";
 			};
 			name = Release;
 		};
@@ -905,6 +934,16 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		16732B272544C34400894C19 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16732B262544C34400894C19 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		169736552545CCA9001EFBD1 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16AF12D025447244006F32F0 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		169736572545CCA9001EFBD1 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 16732B262544C34400894C19 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;

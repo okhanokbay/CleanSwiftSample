@@ -9,12 +9,12 @@ import UIKit
 import Kingfisher
 
 final class MessageTableViewCell: UITableViewCell {
-  @IBOutlet weak var imageViewProfilePhoto: UIImageView!
-  @IBOutlet weak var labelSenderName: UILabel!
-  @IBOutlet weak var labelMessageContent: EdgeInsetLabel!
-  @IBOutlet weak var labelDateTime: UILabel!
+  @IBOutlet private weak var imageViewProfilePhoto: UIImageView!
+  @IBOutlet private weak var labelSenderName: UILabel!
+  @IBOutlet private weak var labelMessageContent: EdgeInsetLabel!
+  @IBOutlet private weak var labelDateTime: UILabel!
   
-  @IBOutlet weak var imageContainerView: UIView!
+  @IBOutlet private weak var imageContainerView: UIView!
   
   
   var viewGroup: [UIView] {
