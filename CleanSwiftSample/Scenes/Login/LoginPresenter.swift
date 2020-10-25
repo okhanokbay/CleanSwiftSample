@@ -22,7 +22,7 @@ final class LoginPresenter {
   
   private weak var displayer: LoginDisplayLogic!
   
-  init(displayer: LoginDisplayLogic!) {
+  init(displayer: LoginDisplayLogic) {
     self.displayer = displayer
   }
 }

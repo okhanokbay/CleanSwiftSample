@@ -22,11 +22,7 @@ enum Login {
   struct ViewModel {
     let alert: AlertViewModel?
     
-    init() {
-      self.alert = nil
-    }
-    
-    init(alert: AlertViewModel) {
+    init(alert: AlertViewModel? = nil) {
       self.alert = alert
     }
   }
