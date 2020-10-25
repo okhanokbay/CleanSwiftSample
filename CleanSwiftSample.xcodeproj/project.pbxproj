@@ -20,6 +20,9 @@
 		169735052544ED9E001EFBD1 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735042544ED9E001EFBD1 /* TimeInterval+Extensions.swift */; };
 		169735322544FE50001EFBD1 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */; };
 		169735372544FE64001EFBD1 /* LocalProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735362544FE64001EFBD1 /* LocalProperties.swift */; };
+		16973544254505AC001EFBD1 /* MessagesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16973543254505AC001EFBD1 /* MessagesInteractorTests.swift */; };
+		1697354C25450628001EFBD1 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697354B25450628001EFBD1 /* Mocks.swift */; };
+		169735512545066B001EFBD1 /* MessagesStubResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 169735502545066B001EFBD1 /* MessagesStubResponse.json */; };
 		16AF127E25445757006F32F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127D25445757006F32F0 /* AppDelegate.swift */; };
 		16AF128025445757006F32F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127F25445757006F32F0 /* SceneDelegate.swift */; };
 		16AF128725445759006F32F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AF128625445759006F32F0 /* Assets.xcassets */; };
@@ -98,6 +101,9 @@
 		169735042544ED9E001EFBD1 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
 		169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
 		169735362544FE64001EFBD1 /* LocalProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProperties.swift; sourceTree = "<group>"; };
+		16973543254505AC001EFBD1 /* MessagesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesInteractorTests.swift; sourceTree = "<group>"; };
+		1697354B25450628001EFBD1 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		169735502545066B001EFBD1 /* MessagesStubResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MessagesStubResponse.json; sourceTree = "<group>"; };
 		16AF127A25445757006F32F0 /* CleanSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AF127D25445757006F32F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AF127F25445757006F32F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +193,16 @@
 			path = MessagesViewController;
 			sourceTree = "<group>";
 		};
+		1697354225450561001EFBD1 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				16973543254505AC001EFBD1 /* MessagesInteractorTests.swift */,
+				1697354B25450628001EFBD1 /* Mocks.swift */,
+				169735502545066B001EFBD1 /* MessagesStubResponse.json */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		16AF127125445757006F32F0 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +237,7 @@
 		16AF129325445759006F32F0 /* CleanSwiftSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				1697354225450561001EFBD1 /* Messages */,
 				16AF129425445759006F32F0 /* CleanSwiftSampleTests.swift */,
 				16AF129625445759006F32F0 /* Info.plist */,
 			);
@@ -470,6 +487,7 @@
 			files = (
 				16AF134025448E64006F32F0 /* MessagesViewController.xib in Resources */,
 				16AF131F25447CAC006F32F0 /* LoginViewController.xib in Resources */,
+				169735512545066B001EFBD1 /* MessagesStubResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,12 +552,14 @@
 				16AF130B254475C8006F32F0 /* MessagesViewController.swift in Sources */,
 				16AF1307254475C8006F32F0 /* MessagesRouter.swift in Sources */,
 				16732B312544C74000894C19 /* MessagesTableViewDataSource.swift in Sources */,
+				1697354C25450628001EFBD1 /* Mocks.swift in Sources */,
 				16AF13862544B451006F32F0 /* MessagesAPIResponse.swift in Sources */,
 				16AF12EF2544754D006F32F0 /* LoginRouter.swift in Sources */,
 				16AF1309254475C8006F32F0 /* MessagesModels.swift in Sources */,
 				16AF134A25448F7F006F32F0 /* UIViewController+Extensions.swift in Sources */,
 				16AF132B254486B2006F32F0 /* LoginDataStore.swift in Sources */,
 				16AF13532544915E006F32F0 /* MessagesDataStore.swift in Sources */,
+				16973544254505AC001EFBD1 /* MessagesInteractorTests.swift in Sources */,
 				16AF1305254475C8006F32F0 /* MessagesWorker.swift in Sources */,
 				16AF13842544B451006F32F0 /* MessagesEndpoint.swift in Sources */,
 				16AF130D254475C8006F32F0 /* MessagesInteractor.swift in Sources */,

@@ -9,37 +9,39 @@ import UIKit
 import Kingfisher
 
 final class MessageTableViewCell: UITableViewCell {
-  enum MessageType {
-    case sent, received(photoURL: URL)
-  }
-  
   @IBOutlet weak var imageViewProfilePhoto: UIImageView!
   @IBOutlet weak var labelSenderName: UILabel!
   @IBOutlet weak var labelMessageContent: UILabel!
   
   @IBOutlet weak var imageContainerView: UIView!
   
+  var viewGroup: [UIView] {
+    [contentView, imageViewProfilePhoto, labelSenderName, labelMessageContent]
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     
     contentView.backgroundColor = .clear
     backgroundColor = .clear
+    
+    imageViewProfilePhoto.layer.cornerRadius = imageViewProfilePhoto.bounds.width / 2
   }
   
-  func configureCell(messageType: MessageType,
-                     senderName: String,
-                     messageContent: String) {
+  func configureCell(with viewModel: CellViewModel) {
     
-    switch messageType {
-    case .sent:
-      imageContainerView.isHidden = true
-      
-    case .received(let photoURL):
-      imageContainerView.isHidden = false
-      imageViewProfilePhoto.kf.setImage(with: photoURL)
+    if viewModel.isOwnMessage {
+      viewGroup.forEach { $0.transform = CGAffineTransform(scaleX: -1,y: 1) }
     }
     
-    labelSenderName.text = senderName
-    labelMessageContent.text = messageContent
+    imageViewProfilePhoto.kf.setImage(with: viewModel.photoURL)
+    labelSenderName.text = viewModel.senderName
+    labelMessageContent.text = viewModel.messageContent
+  }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    
+    viewGroup.forEach { $0.transform = .identity }
   }
 }

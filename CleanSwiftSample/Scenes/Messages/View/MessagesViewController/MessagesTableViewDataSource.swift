@@ -19,10 +19,8 @@ final class MessagesTableViewDataSource: NSObject, UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MessageTableViewCell
     
     let cellViewModel = cellViewModels[indexPath.row]
+    cell.configureCell(with: cellViewModel)
     
-    cell.configureCell(messageType: cellViewModel.isOwnMessage ? .sent : .received(photoURL: cellViewModel.photoURL!),
-                       senderName: cellViewModel.senderName,
-                       messageContent: cellViewModel.messageContent)
     return cell
   }
 }

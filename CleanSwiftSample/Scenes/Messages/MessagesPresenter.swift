@@ -39,7 +39,7 @@ extension MessagesPresenter: MessagesPresentationLogic {
     case .success(let messages):
       cellViewModels = messages.map { CellViewModel(isOwnMessage: false,
                                                     senderName: $0.user.nickname,
-                                                    photoURL: URL(string: $0.user.avatarURL!)!,
+                                                    photoURL: URL(string: $0.user.avatarURL ?? ""),
                                                     messageContent: $0.text,
                                                     sentTime: $0.timestamp.humanReadableDateTime) }
       
@@ -58,7 +58,7 @@ extension MessagesPresenter: MessagesPresentationLogic {
   func presentNewMessage(response: NewMessage.Response) {
     let newMessageViewModel = CellViewModel(isOwnMessage: true,
                                             senderName: response.username,
-                                            photoURL: nil,
+                                            photoURL: URL(string: LocalProperties.profilePhotoURL),
                                             messageContent: response.message,
                                             sentTime: Date().timeIntervalSince1970.humanReadableDateTime)
     
