@@ -54,7 +54,12 @@ final class LoginViewController: UIViewController {
     super.viewDidLoad()
     
     setupPlaceholder()
+    setupBackButton()
     checkSession()
+  }
+  
+  func setupBackButton() {
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: Strings.leave, style: .plain, target: nil, action: nil)
   }
   
   func setupPlaceholder() {
