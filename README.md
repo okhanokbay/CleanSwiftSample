@@ -1,3 +1,3 @@
 # CleanSwiftSample
 
-![Alt text](CleanSwiftSample/screenshot.jpeg "Screenshot:"){:height="200px" width="200px"}
+<img src="https://github.com/okhanokbay/CleanSwiftSample/blob/main/CleanSwiftSample/screenshot.jpeg" width=300>
