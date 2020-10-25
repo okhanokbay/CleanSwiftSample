@@ -5,6 +5,7 @@
 //  Created by Okhan Okbay on 25.10.2020.
 //
 
+@testable import CleanSwiftSample
 import XCTest
 
 class MessagesInteractorTests: XCTestCase {
@@ -26,6 +27,8 @@ class MessagesInteractorTests: XCTestCase {
   }
 }
 
+// MARK: setupInitials(_:) tests
+
 extension MessagesInteractorTests {
   func test_WhenSetupInitialsCalled_ThenPresentInitialsCalled() {
     // given
@@ -40,7 +43,11 @@ extension MessagesInteractorTests {
     XCTAssertEqual(mockPresenter.presentInitialsCallCount, 1, "Present initials is not called 1 time")
     XCTAssertEqual(mockPresenter.presentInitialsReceivedResponse?.title, username, "Title is not as expected")
   }
-  
+}
+
+// MARK: fetchMessages(_:) tests
+
+extension MessagesInteractorTests {
   func test_WhenFetchMessagesCalledAndReceivesSuccessResponse_ThenPresentMessagesCalled() {
     assert_WhenFetchMessagesCalled_ThenPresentMessagesCalled(isSuccessResponse: true)
   }
@@ -55,7 +62,7 @@ extension MessagesInteractorTests {
     var expectedInnerValue: FetchMessages.Response.InnerValue
     
     if isSuccessResponse {
-      let wrapper: MessagesWrapper = TestHelper.loadJSONFromFile(name: "MessagesStubResponse")
+      let wrapper: MessagesWrapper = TestHelper.loadJSONFromFile(name: TestHelper.stubMessagesResponseFileName)
       expectedInnerValue = .success(wrapper.messages)
       
     } else {
@@ -72,3 +79,34 @@ extension MessagesInteractorTests {
   }
 }
 
+// MARK: sendMessage(_:) tests
+
+extension MessagesInteractorTests {
+  func test_WhenSendMessageCalledWithEmptyText_ThenPresentNewMessageNOTCalled() {
+    // given
+    let request = NewMessage.Request(text: nil)
+    
+    // when
+    sut.sendMessage(request: request)
+    
+    // then
+    XCTAssertEqual(mockPresenter.presentNewMessageCallCount, 0, "Present new message is called at least once")
+    XCTAssertNil(mockPresenter.presentNewMessageReceivedResponse, "New message is not nil")
+  }
+  
+  func test_WhenSendMessageCalledeWithNONEmptyText_ThenPresentNewMessageCalled() {
+    // given
+    let message = "New message text"
+    let request = NewMessage.Request(text: message)
+    let username = "TestUsername"
+    
+    // when
+    mockDataStore.username = username
+    sut.sendMessage(request: request)
+    
+    // then
+    XCTAssertEqual(mockPresenter.presentNewMessageCallCount, 1, "Present new message is not called 1 time")
+    XCTAssertEqual(mockPresenter.presentNewMessageReceivedResponse?.message, message, "Message is not as expected")
+    XCTAssertEqual(mockPresenter.presentNewMessageReceivedResponse?.username, username, "Username is not as expected")
+  }
+}

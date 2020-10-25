@@ -5,6 +5,7 @@
 //  Created by Okhan Okbay on 25.10.2020.
 //
 
+@testable import CleanSwiftSample
 import Foundation
 
 class MockMessagesWorker: MessagesWorkerProtocol {
@@ -13,7 +14,7 @@ class MockMessagesWorker: MessagesWorkerProtocol {
   func fetchMessageHistory(completion: @escaping (Result<[Message], MessageAPIError>) -> Void) {
     
     if shouldReturnSuccess {
-      let wrapper: MessagesWrapper = TestHelper.loadJSONFromFile(name: "MessagesStubResponse")
+      let wrapper: MessagesWrapper = TestHelper.loadJSONFromFile(name: TestHelper.stubMessagesResponseFileName)
       completion(.success(wrapper.messages))
       
     } else {
@@ -76,5 +77,31 @@ class MockInteractor: MessagesBusinessLogic {
   func sendMessage(request: NewMessage.Request) {
     sendMessageCallCount += 1
     sendMessageReceivedRequest = request
+  }
+}
+
+class MockDisplayer: MessagesDisplayLogic {
+  var displayInitialsCallCount = 0
+  var displayInitialsReceivedViewModel: MessagesViewInitials.ViewModel?
+  
+  var displayMessagesCallCount = 0
+  var displayMessagesReceivedViewModel: FetchMessages.ViewModel?
+  
+  var displayNewMessageCallCount = 0
+  var displayNewMessageReceivedViewModel: NewMessage.ViewModel?
+  
+  func displayInitials(viewModel: MessagesViewInitials.ViewModel) {
+    displayInitialsCallCount += 1
+    displayInitialsReceivedViewModel = viewModel
+  }
+  
+  func displayMessages(viewModel: FetchMessages.ViewModel) {
+    displayMessagesCallCount += 1
+    displayMessagesReceivedViewModel = viewModel
+  }
+  
+  func displayNewMessage(viewModel: NewMessage.ViewModel) {
+    displayNewMessageCallCount += 1
+    displayNewMessageReceivedViewModel = viewModel
   }
 }

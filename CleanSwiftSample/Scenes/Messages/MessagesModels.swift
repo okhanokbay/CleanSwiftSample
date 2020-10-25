@@ -19,6 +19,22 @@ struct CellViewModel {
   let photoURL: URL?
   let messageContent: String
   let sentTime: String
+  
+  init(message: Message) {
+    isOwnMessage = false
+    senderName = message.user.nickname
+    photoURL = URL(string: message.user.avatarURL ?? "")
+    messageContent = message.text
+    sentTime = message.timestamp.humanReadableDateTime
+  }
+  
+  init(newMessage: NewMessage.Response) {
+    isOwnMessage = true
+    senderName = newMessage.username
+    photoURL = URL(string: LocalProperties.profilePhotoURL)
+    messageContent = newMessage.message
+    sentTime = Date().timeIntervalSince1970.humanReadableDateTime
+  }
 }
 
 enum FetchMessages {
@@ -32,7 +48,7 @@ enum FetchMessages {
     
     let innerValue: InnerValue
   }
-
+  
   struct ViewModel {
     enum InnerValue {
       case success([CellViewModel])

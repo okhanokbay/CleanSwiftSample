@@ -20,7 +20,7 @@ protocol MessagesPresentationLogic {
 
 final class MessagesPresenter {
   private weak var displayer: MessagesDisplayLogic!
-  private var cellViewModels: [CellViewModel]
+  var cellViewModels: [CellViewModel]
   
   init(displayer: MessagesDisplayLogic) {
     self.displayer = displayer
@@ -37,11 +37,7 @@ extension MessagesPresenter: MessagesPresentationLogic {
   func presentMessages(response: FetchMessages.Response) {
     switch response.innerValue {
     case .success(let messages):
-      cellViewModels = messages.map { CellViewModel(isOwnMessage: false,
-                                                    senderName: $0.user.nickname,
-                                                    photoURL: URL(string: $0.user.avatarURL ?? ""),
-                                                    messageContent: $0.text,
-                                                    sentTime: $0.timestamp.humanReadableDateTime) }
+      cellViewModels = messages.map(CellViewModel.init)
       
       let viewModel = FetchMessages.ViewModel(innerValue: .success(cellViewModels))
       displayer.displayMessages(viewModel: viewModel)
@@ -56,13 +52,7 @@ extension MessagesPresenter: MessagesPresentationLogic {
   }
   
   func presentNewMessage(response: NewMessage.Response) {
-    let newMessageViewModel = CellViewModel(isOwnMessage: true,
-                                            senderName: response.username,
-                                            photoURL: URL(string: LocalProperties.profilePhotoURL),
-                                            messageContent: response.message,
-                                            sentTime: Date().timeIntervalSince1970.humanReadableDateTime)
-    
-    cellViewModels.append(newMessageViewModel)
+    cellViewModels.append(CellViewModel.init(newMessage: response))
     
     let viewModel = NewMessage.ViewModel(cellViewModels: cellViewModels)
     displayer.displayNewMessage(viewModel: viewModel)
