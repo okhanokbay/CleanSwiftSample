@@ -38,6 +38,9 @@ final class MessageTableViewCell: UITableViewCell {
     
     if viewModel.isOwnMessage {
       viewGroup.forEach { $0.transform = CGAffineTransform(scaleX: -1,y: 1) }
+      labelMessageContent.backgroundColor = .systemGreen
+    } else {
+      labelMessageContent.backgroundColor = .systemTeal
     }
     
     imageViewProfilePhoto.kf.setImage(with: viewModel.photoURL)

@@ -12,6 +12,13 @@ final class MessageInputView: UIView {
   @IBOutlet weak var buttonSend: UIButton!
   
   var buttonSendTapped: ((_ text: String?) -> Void)?
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    
+    let color = UIColor.darkGray.withAlphaComponent(0.5)
+    addTopBorder(color: color, width: 0.3)
+  }
 
   @IBAction func buttonSendTapped(_ sender: Any) {
     if (textField.text?.count ?? 0) > 0 {
