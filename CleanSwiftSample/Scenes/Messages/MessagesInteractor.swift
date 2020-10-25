@@ -36,7 +36,7 @@ final class MessagesInteractor {
 
 extension MessagesInteractor: MessagesBusinessLogic {
   func setupInitials(request: MessagesViewInitials.Request) {
-    let response = MessagesViewInitials.Response(title: dataStore.username)
+    let response = MessagesViewInitials.Response(title: dataStore.username ?? "")
     presenter.presentInitials(response: response)
   }
   
@@ -62,7 +62,7 @@ extension MessagesInteractor: MessagesBusinessLogic {
   
   func sendMessage(request: NewMessage.Request) {
     if let text = request.text {
-      let response = NewMessage.Response(message: text, username: dataStore.username)
+      let response = NewMessage.Response(message: text, username: dataStore.username ?? "")
       presenter.presentNewMessage(response: response)
     }
   }

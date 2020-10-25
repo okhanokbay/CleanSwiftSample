@@ -25,7 +25,7 @@ class MockMessagesWorker: MessagesWorkerProtocol {
 
 
 class MockMessagesDataStore: MessagesDataStoreProtocol {
-  var username: String!
+  var username: String?
 }
 
 class MockPresenter: MessagesPresentationLogic {

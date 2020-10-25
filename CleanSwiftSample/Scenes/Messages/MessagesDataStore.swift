@@ -8,9 +8,9 @@
 import Foundation
 
 protocol MessagesDataStoreProtocol: AnyObject {
-  var username: String! { get set }
+  var username: String? { get set }
 }
 
 final class MessagesDataStore: MessagesDataStoreProtocol {
-  var username: String!
+  var username: String?
 }

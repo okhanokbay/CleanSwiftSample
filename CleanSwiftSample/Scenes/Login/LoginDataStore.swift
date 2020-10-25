@@ -8,9 +8,9 @@
 import Foundation
 
 protocol LoginDataStoreProtocol: AnyObject {
-  var username: String! { get set }
+  var username: String? { get set }
 }
 
 final class LoginDataStore: LoginDataStoreProtocol {
-  var username: String!
+  var username: String?
 }
