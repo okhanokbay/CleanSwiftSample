@@ -13,14 +13,11 @@ class MockMessagesWorker: MessagesWorkerProtocol {
   func fetchMessageHistory(completion: @escaping (Result<[Message], MessageAPIError>) -> Void) {
     
     if shouldReturnSuccess {
-      let bundle = Bundle(for: Self.self)
-      let path = bundle.path(forResource: "MessagesStubResponse", ofType: "json")!
-      let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
-      let wrapper = try! JSONDecoder().decode(MessagesWrapper.self, from: data)
+      let wrapper: MessagesWrapper = TestHelper.loadJSONFromFile(name: "MessagesStubResponse")
       completion(.success(wrapper.messages))
       
     } else {
-      completion(.failure(.serverError(localizedDescription: "Server error")))
+      completion(.failure(.serverError(customDescription: "Server error")))
     }
   }
 }

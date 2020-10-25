@@ -14,13 +14,13 @@ import Foundation
 import Moya
 
 enum MessageAPIError: Error {
-  case decodingError(localizedDescription: String)
-  case serverError(localizedDescription: String)
+  case decodingError(customDescription: String)
+  case serverError(customDescription: String)
   
-  var localizedDescription: String? {
+  var customDescription: String {
     switch self {
-    case .decodingError(let localizedDescription), .serverError(let localizedDescription):
-      return localizedDescription
+    case .decodingError(let customDescription), .serverError(let customDescription):
+      return customDescription
     }
   }
 }
@@ -43,11 +43,11 @@ final class MessagesWorker: MessagesWorkerProtocol {
           completion(.success(wrapper.messages))
           
         } catch {
-          completion(.failure(.decodingError(localizedDescription: error.localizedDescription)))
+          completion(.failure(.decodingError(customDescription: error.localizedDescription)))
         }
         
       case .failure(let error):
-        completion(.failure(.serverError(localizedDescription: error.localizedDescription)))
+        completion(.failure(.serverError(customDescription: error.localizedDescription)))
       }
     }
   }

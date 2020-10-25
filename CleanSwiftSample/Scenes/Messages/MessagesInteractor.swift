@@ -52,7 +52,7 @@ extension MessagesInteractor: MessagesBusinessLogic {
         innerValue = .success(messages)
         
       case .failure(let error):
-        innerValue = .failure(error.localizedDescription)
+        innerValue = .failure(error.customDescription)
       }
       
       let response = FetchMessages.Response(innerValue: innerValue)

@@ -55,8 +55,9 @@
 		169736482545CC58001EFBD1 /* MessagesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FC254475C8006F32F0 /* MessagesPresenter.swift */; };
 		1697364C2545CC5A001EFBD1 /* MessagesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FD254475C8006F32F0 /* MessagesWorker.swift */; };
 		169736502545CC5B001EFBD1 /* MessagesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF12FE254475C8006F32F0 /* MessagesRouter.swift */; };
-		169736562545CCA9001EFBD1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 169736552545CCA9001EFBD1 /* Moya */; };
-		169736582545CCA9001EFBD1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 169736572545CCA9001EFBD1 /* Kingfisher */; };
+		1697365D2545D173001EFBD1 /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697365C2545D173001EFBD1 /* TestHelper.swift */; };
+		169736712545D56B001EFBD1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 169736702545D56B001EFBD1 /* Moya */; };
+		169736732545D56B001EFBD1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 169736722545D56B001EFBD1 /* Kingfisher */; };
 		16AF127E25445757006F32F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127D25445757006F32F0 /* AppDelegate.swift */; };
 		16AF128025445757006F32F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127F25445757006F32F0 /* SceneDelegate.swift */; };
 		16AF128725445759006F32F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AF128625445759006F32F0 /* Assets.xcassets */; };
@@ -118,6 +119,7 @@
 		1697354B25450628001EFBD1 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		169735502545066B001EFBD1 /* MessagesStubResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MessagesStubResponse.json; sourceTree = "<group>"; };
 		1697355D2545AA2E001EFBD1 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
+		1697365C2545D173001EFBD1 /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		16AF127A25445757006F32F0 /* CleanSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AF127D25445757006F32F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AF127F25445757006F32F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,8 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				169736582545CCA9001EFBD1 /* Kingfisher in Frameworks */,
-				169736562545CCA9001EFBD1 /* Moya in Frameworks */,
+				169736732545D56B001EFBD1 /* Kingfisher in Frameworks */,
+				169736712545D56B001EFBD1 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +262,7 @@
 		16AF129325445759006F32F0 /* CleanSwiftSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				1697365C2545D173001EFBD1 /* TestHelper.swift */,
 				1697354225450561001EFBD1 /* Messages */,
 				16AF129625445759006F32F0 /* Info.plist */,
 			);
@@ -423,8 +426,8 @@
 			);
 			name = CleanSwiftSampleTests;
 			packageProductDependencies = (
-				169736552545CCA9001EFBD1 /* Moya */,
-				169736572545CCA9001EFBD1 /* Kingfisher */,
+				169736702545D56B001EFBD1 /* Moya */,
+				169736722545D56B001EFBD1 /* Kingfisher */,
 			);
 			productName = CleanSwiftSampleTests;
 			productReference = 16AF129025445759006F32F0 /* CleanSwiftSampleTests.xctest */;
@@ -584,6 +587,7 @@
 				1697361C2545CC41001EFBD1 /* MessagesEndpoint.swift in Sources */,
 				169736182545CC3F001EFBD1 /* MessagesAPIResponse.swift in Sources */,
 				169735D82545CC21001EFBD1 /* ValidationRules.swift in Sources */,
+				1697365D2545D173001EFBD1 /* TestHelper.swift in Sources */,
 				169736482545CC58001EFBD1 /* MessagesPresenter.swift in Sources */,
 				169736042545CC35001EFBD1 /* LoginModels.swift in Sources */,
 				169736502545CC5B001EFBD1 /* MessagesRouter.swift in Sources */,
@@ -938,12 +942,12 @@
 			package = 16732B262544C34400894C19 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		169736552545CCA9001EFBD1 /* Moya */ = {
+		169736702545D56B001EFBD1 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 16AF12D025447244006F32F0 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		169736572545CCA9001EFBD1 /* Kingfisher */ = {
+		169736722545D56B001EFBD1 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 16732B262544C34400894C19 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;

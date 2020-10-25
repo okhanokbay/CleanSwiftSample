@@ -67,8 +67,7 @@ final class MessagesViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
-    setupBackButton()
+  
     reloadInputViews()
   }
   
@@ -92,10 +91,6 @@ final class MessagesViewController: UIViewController {
       let request = NewMessage.Request(text: text)
       self?.interactor.sendMessage(request: request)
     }
-  }
-  
-  func setupBackButton() {
-    navigationController?.navigationBar.backItem?.title = Strings.leave
   }
   
   func setupTableView() {
