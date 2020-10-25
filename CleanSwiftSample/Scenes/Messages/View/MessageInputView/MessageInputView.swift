@@ -12,8 +12,11 @@ final class MessageInputView: UIView {
   @IBOutlet weak var buttonSend: UIButton!
   
   var buttonSendTapped: ((_ text: String?) -> Void)?
-  
+
   @IBAction func buttonSendTapped(_ sender: Any) {
-    buttonSendTapped?(textField.text)
+    if (textField.text?.count ?? 0) > 0 {
+      buttonSendTapped?(textField.text)
+      textField.text = nil
+    }
   }
 }

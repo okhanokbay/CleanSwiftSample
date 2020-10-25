@@ -23,6 +23,7 @@
 		16973544254505AC001EFBD1 /* MessagesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16973543254505AC001EFBD1 /* MessagesInteractorTests.swift */; };
 		1697354C25450628001EFBD1 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697354B25450628001EFBD1 /* Mocks.swift */; };
 		169735512545066B001EFBD1 /* MessagesStubResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 169735502545066B001EFBD1 /* MessagesStubResponse.json */; };
+		1697355E2545AA2E001EFBD1 /* EdgeInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697355D2545AA2E001EFBD1 /* EdgeInsetLabel.swift */; };
 		16AF127E25445757006F32F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127D25445757006F32F0 /* AppDelegate.swift */; };
 		16AF128025445757006F32F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127F25445757006F32F0 /* SceneDelegate.swift */; };
 		16AF128725445759006F32F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AF128625445759006F32F0 /* Assets.xcassets */; };
@@ -104,6 +105,7 @@
 		16973543254505AC001EFBD1 /* MessagesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesInteractorTests.swift; sourceTree = "<group>"; };
 		1697354B25450628001EFBD1 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		169735502545066B001EFBD1 /* MessagesStubResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MessagesStubResponse.json; sourceTree = "<group>"; };
+		1697355D2545AA2E001EFBD1 /* EdgeInsetLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsetLabel.swift; sourceTree = "<group>"; };
 		16AF127A25445757006F32F0 /* CleanSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AF127D25445757006F32F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AF127F25445757006F32F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				16732B102544BC0900894C19 /* AlertFactory.swift */,
 				169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */,
 				169735362544FE64001EFBD1 /* LocalProperties.swift */,
+				1697355D2545AA2E001EFBD1 /* EdgeInsetLabel.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				16732B0C2544B92000894C19 /* ViewModels.swift in Sources */,
 				16AF134925448F7F006F32F0 /* UIViewController+Extensions.swift in Sources */,
 				16AF130C254475C8006F32F0 /* MessagesInteractor.swift in Sources */,
+				1697355E2545AA2E001EFBD1 /* EdgeInsetLabel.swift in Sources */,
 				169735372544FE64001EFBD1 /* LocalProperties.swift in Sources */,
 				16AF133925448B20006F32F0 /* ValidationRules.swift in Sources */,
 				16AF12F02544754D006F32F0 /* LoginModels.swift in Sources */,

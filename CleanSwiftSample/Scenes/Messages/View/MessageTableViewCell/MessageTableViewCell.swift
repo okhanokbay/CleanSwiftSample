@@ -11,21 +11,27 @@ import Kingfisher
 final class MessageTableViewCell: UITableViewCell {
   @IBOutlet weak var imageViewProfilePhoto: UIImageView!
   @IBOutlet weak var labelSenderName: UILabel!
-  @IBOutlet weak var labelMessageContent: UILabel!
+  @IBOutlet weak var labelMessageContent: EdgeInsetLabel!
+  @IBOutlet weak var labelDateTime: UILabel!
   
   @IBOutlet weak var imageContainerView: UIView!
   
+  
   var viewGroup: [UIView] {
-    [contentView, imageViewProfilePhoto, labelSenderName, labelMessageContent]
+    [contentView, imageViewProfilePhoto, labelSenderName, labelMessageContent, labelDateTime]
   }
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    
+
     contentView.backgroundColor = .clear
     backgroundColor = .clear
     
     imageViewProfilePhoto.layer.cornerRadius = imageViewProfilePhoto.bounds.width / 2
+    labelMessageContent.layer.cornerRadius = 8
+    
+    let inset: CGFloat = 4
+    labelMessageContent.edgeInsets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
   }
   
   func configureCell(with viewModel: CellViewModel) {
@@ -37,6 +43,7 @@ final class MessageTableViewCell: UITableViewCell {
     imageViewProfilePhoto.kf.setImage(with: viewModel.photoURL)
     labelSenderName.text = viewModel.senderName
     labelMessageContent.text = viewModel.messageContent
+    labelDateTime.text = viewModel.sentTime
   }
   
   override func prepareForReuse() {
