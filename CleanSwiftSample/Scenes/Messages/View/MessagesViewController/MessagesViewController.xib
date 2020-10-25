@@ -31,7 +31,7 @@
                 <constraint firstItem="oEG-WC-GBK" firstAttribute="top" secondItem="Th7-gs-Z3r" secondAttribute="top" id="fJx-WJ-FUe"/>
                 <constraint firstItem="Th7-gs-Z3r" firstAttribute="bottom" secondItem="oEG-WC-GBK" secondAttribute="bottom" id="s20-Rq-1Kb"/>
             </constraints>
-            <point key="canvasLocation" x="258" y="90"/>
+            <point key="canvasLocation" x="257.97101449275362" y="89.732142857142847"/>
         </view>
     </objects>
 </document>

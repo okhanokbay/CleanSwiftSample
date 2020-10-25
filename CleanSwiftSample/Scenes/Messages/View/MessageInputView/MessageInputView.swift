@@ -26,4 +26,11 @@ final class MessageInputView: UIView {
       textField.text = nil
     }
   }
+  
+  override func didMoveToWindow() {
+    super.didMoveToWindow()
+    if let window = self.window {
+      self.bottomAnchor.constraint(lessThanOrEqualToSystemSpacingBelow: window.safeAreaLayoutGuide.bottomAnchor, multiplier: 1.0).isActive = true
+    }
+  }
 }
