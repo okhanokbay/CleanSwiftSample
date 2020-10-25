@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1661A6CF2545FB41004BF200 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1661A6CE2545FB41004BF200 /* Moya */; };
 		1661A6D12545FB41004BF200 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1661A6D02545FB41004BF200 /* Kingfisher */; };
+		1661A6DF2545FCE6004BF200 /* screenshot.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1661A6DE2545FCE6004BF200 /* screenshot.jpeg */; };
 		16732B0C2544B92000894C19 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B0B2544B92000894C19 /* ViewModels.swift */; };
 		16732B112544BC0900894C19 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B102544BC0900894C19 /* AlertFactory.swift */; };
 		16732B1A2544BF1100894C19 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B192544BF1100894C19 /* MessageTableViewCell.swift */; };
@@ -97,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1661A6DE2545FCE6004BF200 /* screenshot.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screenshot.jpeg; sourceTree = "<group>"; };
 		16732B0B2544B92000894C19 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
 		16732B102544BC0900894C19 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
 		16732B192544BF1100894C19 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		16AF127C25445757006F32F0 /* CleanSwiftSample */ = {
 			isa = PBXGroup;
 			children = (
+				1661A6DE2545FCE6004BF200 /* screenshot.jpeg */,
 				16AF12D9254472E0006F32F0 /* Shared */,
 				16AF12B025445792006F32F0 /* Scenes */,
 				16AF12B125445797006F32F0 /* Main */,
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16AF128A25445759006F32F0 /* LaunchScreen.storyboard in Resources */,
+				1661A6DF2545FCE6004BF200 /* screenshot.jpeg in Resources */,
 				16AF128725445759006F32F0 /* Assets.xcassets in Resources */,
 				16732B222544BF2B00894C19 /* MessageTableViewCell.xib in Resources */,
 				16732B422544D28500894C19 /* MessageInputView.xib in Resources */,
