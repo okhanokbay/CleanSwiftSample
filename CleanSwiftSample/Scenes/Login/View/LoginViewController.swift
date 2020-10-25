@@ -15,6 +15,7 @@ import UIKit
 protocol LoginDisplayLogic: class {
   func displayMessages(viewModel: Login.ViewModel)
   func displayAlert(viewModel: Login.ViewModel)
+  func displayAutoLogin(viewModel: AutoLogin.ViewModel)
 }
 
 final class LoginViewController: UIViewController {
@@ -52,8 +53,18 @@ final class LoginViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupPlaceholder()
+    checkSession()
+  }
+  
+  func setupPlaceholder() {
     textFieldUsername.attributedPlaceholder = NSAttributedString(string: Strings.usernamePlaceholder,
                                                                  attributes: [.foregroundColor: UIColor.darkGray])
+  }
+  
+  func checkSession() {
+    let request = AutoLogin.Request()
+    interactor.checkSession(request: request)
   }
   
   @IBAction func buttonContinueTapped(_ sender: Any) {
@@ -70,5 +81,9 @@ extension LoginViewController: LoginDisplayLogic {
   
   func displayAlert(viewModel: Login.ViewModel) {
     present(viewModel.alert!.alertController, animated: true, completion: nil)
+  }
+  
+  func displayAutoLogin(viewModel: AutoLogin.ViewModel) {
+    router.routeToMessages()
   }
 }

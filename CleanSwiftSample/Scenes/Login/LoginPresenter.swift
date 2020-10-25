@@ -15,16 +15,19 @@ import UIKit
 protocol LoginPresentationLogic: AnyObject {
   func presentMessages(response: Login.Response)
   func presentAlert(response: Login.Response)
+  func presentAutoLogin(response: AutoLogin.Response)
 }
 
-final class LoginPresenter: LoginPresentationLogic {
+final class LoginPresenter {
   
   private weak var displayer: LoginDisplayLogic!
   
   init(displayer: LoginDisplayLogic!) {
     self.displayer = displayer
   }
-  
+}
+
+extension LoginPresenter: LoginPresentationLogic {
   func presentMessages(response: Login.Response) {
     let viewModel = Login.ViewModel()
     displayer.displayMessages(viewModel: viewModel)
@@ -37,5 +40,10 @@ final class LoginPresenter: LoginPresentationLogic {
     
     let viewModel = Login.ViewModel(alert: alert)
     displayer.displayAlert(viewModel: viewModel)
+  }
+  
+  func presentAutoLogin(response: AutoLogin.Response) {
+    let viewModel = AutoLogin.ViewModel()
+    displayer.displayAutoLogin(viewModel: viewModel)
   }
 }

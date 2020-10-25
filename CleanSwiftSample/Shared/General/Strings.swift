@@ -13,4 +13,6 @@ enum Strings {
   
   static let usernamePlaceholder = "Username"
   static var usernameCharacterLength: String { "Username must be longer than \(ValidationRules.usernameMinCharLength) characters" }
+  
+  static let leave = "Leave"
 }

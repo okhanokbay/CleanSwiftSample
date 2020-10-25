@@ -37,6 +37,8 @@ final class LoginRouter: NSObject, LoginRoutingLogic, LoginDataPassing {
     let messagesDataStore = messagesViewController.router.dataStore
     messagesDataStore.username = dataStore.username
     
-    viewController.navigationController?.pushViewController(messagesViewController, animated: true)
+    DispatchQueue.main.async {
+      self.viewController.navigationController?.pushViewController(messagesViewController, animated: true)
+    }
   }
 }

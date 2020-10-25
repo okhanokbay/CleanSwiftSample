@@ -13,10 +13,11 @@
 import Foundation
 
 protocol LoginBusinessLogic: AnyObject {
+  func checkSession(request: AutoLogin.Request)
   func usernameEntered(request: Login.Request)
 }
 
-final class LoginInteractor: LoginBusinessLogic {
+final class LoginInteractor {
   
   private let dataStore: LoginDataStoreProtocol
   private let presenter: LoginPresentationLogic
@@ -27,16 +28,30 @@ final class LoginInteractor: LoginBusinessLogic {
     self.dataStore = dataStore
     self.presenter = presenter
   }
+}
+
+extension LoginInteractor: LoginBusinessLogic {
+  func checkSession(request: AutoLogin.Request) {
+    if let username = LocalProperties.username {
+      dataStore.username = username
+      
+      let response = AutoLogin.Response()
+      presenter.presentAutoLogin(response: response)
+    }
+  }
   
   func usernameEntered(request: Login.Request) {
     let username = request.username ?? ""
-    dataStore.username = username
-    
-    let funcToCall = username.count > ValidationRules.usernameMinCharLength ?
-      presenter.presentMessages :
-      presenter.presentAlert
-    
     let response = Login.Response()
-    funcToCall(response)
+    
+    if username.count > ValidationRules.usernameMinCharLength {
+      dataStore.username = username
+      LocalProperties.username = username
+      
+      presenter.presentMessages(response: response)
+      
+    } else {
+      presenter.presentAlert(response: response)
+    }
   }
 }

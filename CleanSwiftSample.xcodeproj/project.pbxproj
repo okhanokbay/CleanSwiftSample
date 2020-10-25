@@ -18,6 +18,8 @@
 		16732B422544D28500894C19 /* MessageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16732B412544D28500894C19 /* MessageInputView.xib */; };
 		16732B472544D99300894C19 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16732B462544D99300894C19 /* UIView+Extensions.swift */; };
 		169735052544ED9E001EFBD1 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735042544ED9E001EFBD1 /* TimeInterval+Extensions.swift */; };
+		169735322544FE50001EFBD1 /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */; };
+		169735372544FE64001EFBD1 /* LocalProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169735362544FE64001EFBD1 /* LocalProperties.swift */; };
 		16AF127E25445757006F32F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127D25445757006F32F0 /* AppDelegate.swift */; };
 		16AF128025445757006F32F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF127F25445757006F32F0 /* SceneDelegate.swift */; };
 		16AF128725445759006F32F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AF128625445759006F32F0 /* Assets.xcassets */; };
@@ -94,6 +96,8 @@
 		16732B412544D28500894C19 /* MessageInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageInputView.xib; sourceTree = "<group>"; };
 		16732B462544D99300894C19 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		169735042544ED9E001EFBD1 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
+		169735362544FE64001EFBD1 /* LocalProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProperties.swift; sourceTree = "<group>"; };
 		16AF127A25445757006F32F0 /* CleanSwiftSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwiftSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AF127D25445757006F32F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AF127F25445757006F32F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,16 @@
 				16732B412544D28500894C19 /* MessageInputView.xib */,
 			);
 			path = MessageInputView;
+			sourceTree = "<group>";
+		};
+		1697353B2544FEB7001EFBD1 /* MessagesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				16AF1300254475C8006F32F0 /* MessagesViewController.swift */,
+				16AF133E25448E64006F32F0 /* MessagesViewController.xib */,
+				16732B2C2544C47A00894C19 /* MessagesTableViewDataSource.swift */,
+			);
+			path = MessagesViewController;
 			sourceTree = "<group>";
 		};
 		16AF127125445757006F32F0 = {
@@ -296,6 +310,8 @@
 				16AF133825448B20006F32F0 /* ValidationRules.swift */,
 				16732B0B2544B92000894C19 /* ViewModels.swift */,
 				16732B102544BC0900894C19 /* AlertFactory.swift */,
+				169735312544FE50001EFBD1 /* UserDefaultsBacked.swift */,
+				169735362544FE64001EFBD1 /* LocalProperties.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -312,11 +328,9 @@
 		16AF138E2544B462006F32F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1697353B2544FEB7001EFBD1 /* MessagesViewController */,
 				16732B382544CE2700894C19 /* MessageInputView */,
 				16732B182544BF0400894C19 /* MessageTableViewCell */,
-				16AF1300254475C8006F32F0 /* MessagesViewController.swift */,
-				16AF133E25448E64006F32F0 /* MessagesViewController.xib */,
-				16732B2C2544C47A00894C19 /* MessagesTableViewDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +496,7 @@
 				16732B0C2544B92000894C19 /* ViewModels.swift in Sources */,
 				16AF134925448F7F006F32F0 /* UIViewController+Extensions.swift in Sources */,
 				16AF130C254475C8006F32F0 /* MessagesInteractor.swift in Sources */,
+				169735372544FE64001EFBD1 /* LocalProperties.swift in Sources */,
 				16AF133925448B20006F32F0 /* ValidationRules.swift in Sources */,
 				16AF12F02544754D006F32F0 /* LoginModels.swift in Sources */,
 				16AF13332544890C006F32F0 /* Strings.swift in Sources */,
@@ -489,6 +504,7 @@
 				16AF13522544915E006F32F0 /* MessagesDataStore.swift in Sources */,
 				16732B2D2544C47A00894C19 /* MessagesTableViewDataSource.swift in Sources */,
 				16AF12EE2544754D006F32F0 /* LoginRouter.swift in Sources */,
+				169735322544FE50001EFBD1 /* UserDefaultsBacked.swift in Sources */,
 				16AF130A254475C8006F32F0 /* MessagesViewController.swift in Sources */,
 				16AF13832544B451006F32F0 /* MessagesEndpoint.swift in Sources */,
 				16732B472544D99300894C19 /* UIView+Extensions.swift in Sources */,

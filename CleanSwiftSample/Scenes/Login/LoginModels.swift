@@ -31,3 +31,9 @@ enum Login {
     }
   }
 }
+
+enum AutoLogin {
+  struct Request {}
+  struct Response {}
+  struct ViewModel {}
+}

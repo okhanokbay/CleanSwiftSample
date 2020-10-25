@@ -58,15 +58,17 @@ final class MessagesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   
+    
     setupTableView()
     setupInitials()
+    addNotificationObservers()
     fetchMessages()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
+    setupBackButton()
     reloadInputViews()
   }
   
@@ -90,6 +92,10 @@ final class MessagesViewController: UIViewController {
       let request = NewMessage.Request(text: text)
       self?.interactor.sendMessage(request: request)
     }
+  }
+  
+  func setupBackButton() {
+    navigationController?.navigationBar.backItem?.title = Strings.leave
   }
   
   func setupTableView() {
@@ -121,7 +127,10 @@ extension MessagesViewController: MessagesDisplayLogic {
     switch viewModel.innerValue {
     case .success(let cellViewModels):
       tableViewDataSource.cellViewModels = cellViewModels
-      tableView.reloadData()
+      
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
       
     case .failure(let alertViewModel):
       present(alertViewModel.alertController, animated: true, completion: nil)
@@ -134,9 +143,26 @@ extension MessagesViewController: MessagesDisplayLogic {
     let lastRow = tableView.numberOfRows(inSection: 0)
     let indexPath = IndexPath(row: lastRow, section: 0)
     
-    tableView.performBatchUpdates {
-      // NS_NOESCAPE and nullable, since no retain cycles for this specific method
-      tableView.insertRows(at: [indexPath], with: .automatic)
+    DispatchQueue.main.async {
+      self.tableView.performBatchUpdates {
+        // NS_NOESCAPE and nullable, since no retain cycles for this specific method
+        // https://forums.swift.org/t/non-escaping-optional-closures-in-uikit/37565/2
+        self.tableView.insertRows(at: [indexPath], with: .right)
+      }
+      
+      self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
+  }
+}
+
+extension MessagesViewController {
+  func addNotificationObservers() {
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+  }
+  
+  @objc private func keyboardDidShow(notification: NSNotification) {
+      if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+          tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+      }
   }
 }
